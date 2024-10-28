@@ -16,11 +16,15 @@ use App\Models\Transaction;
 */
 Route::get('/', [FrontendController::class, "index"])->name("index");
 Route::get('/contact', [FrontendController::class, "contact"])->name("contact");
-Route::get('/blog', [FrontendController::class, "blog"])->name("blog");
 Route::get("/details/{slug}", [FrontendController::class, "details"])->name("details");
 Route::get('/blog1', [FrontendController::class, "blog1"])->name("blog1");
 Route::get('/blog2', [FrontendController::class, "blog2"])->name("blog2");
 Route::get('/blog3', [FrontendController::class, "blog3"])->name("blog3");
+Route::get('/shop', [FrontendController::class, "shop"])->name("shop");
+Route::get('/shopDetails', [FrontendController::class, "shopDetails"])->name("shopDetails");
+Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
+Route::get('/cartPage', [FrontendController::class, 'cartPage'])->name('cartPage');
+
 
 // Route::middleware([
 //     'auth:sanctum',

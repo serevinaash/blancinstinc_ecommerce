@@ -14,15 +14,15 @@
                                     </div>
                                     <div class="navbar-wrap main-menu d-none d-xl-flex">
                                         <ul class="navigation">
-                                                                                    <li class="active menu-item-has-children"><a href="index-2.html" class="section-link">Home</a>
+                                          <li class="active menu-item-has-children"><a href={{route ("index") }} class="section-link">Home</a>
                                             </li>
-                                            <li><a href="blog.html" class="section-link">Blog</a></li>
-                                            <li class="menu-item-has-children"><a href="#shop" class="section-link">Shop</a>
+                                            <li><a href={{route ("blog") }} class="section-link">Blog</a></li>
+                                            <li class="menu-item-has-children"><a href={{route ("shop")}} class="section-link">Shop</a>
                                       <ul class="sub-menu">
-                                                    <li><a href="shop.html">Our Shop</a></li>
-                                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                                    <li><a href="cart.html">Cart Page</a></li>
-                                                    <li><a href="checkout.html">Checkout Page</a></li>
+                                                    <li><a href={{route ("shop")}} >Our Shop</a></li>
+                                                    <li><a href={{route ("shopDetails")}}>Shop Details</a></li>
+                                                    <li><a href={{route ("cart")}}>Cart Page</a></li>
+                                                    <li><a href={{route ("cart")}}>Checkout Page</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html">Contacts</a></li>

@@ -25,13 +25,13 @@
                                                     <li><a href={{route ("cart")}}>Checkout Page</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contacts</a></li>
-                                            <li><a href="login.html" class="section-link">Login</a></li>
-                                            <li><a href="register.html"class="section-link">Register</a></li>
+                                            <li><a href={{route ("contact")}}>Contacts</a></li>
+                                            <li><a href={{route ("login")}} class="section-link">Login</a></li>
+                                            <li><a href={{route ("register")}} class="section-link">Register</a></li>
                                         </ul>
                                     </div>
                                     <div class="header-btn d-none d-sm-block">
-                                        <a href="#order" class="tg-btn">Order Now</a>
+                                        <a href={{route ("login")}} class="tg-btn">Order Now</a>
                                     </div>
                                 </nav>
                             </div>

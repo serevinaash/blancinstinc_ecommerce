@@ -112,25 +112,24 @@
 
 
 		<!-- JS here -->
-        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/isotope.pkgd.min.js"></script>
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery.odometer.min.js"></script>
-        <script src="assets/js/jquery.appear.js"></script>
-        <script src="assets/js/jquery.paroller.min.js"></script>
-        <script src="assets/js/jquery.easypiechart.min.js"></script>
-        <script src="assets/js/jquery.inview.min.js"></script>
-        <script src="assets/js/jquery.easing.js"></script>
-        <script src="assets/js/jquery-ui.min.js"></script>
-        <script src="assets/js/svg-inject.min.js"></script>
-        <script src="assets/js/jarallax.min.js"></script>
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/validator.js"></script>
-        <script src="assets/js/ajax-form.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src={{url("/mppl/assets/js/bootstrap.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/isotope.pkgd.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/imagesloaded.pkgd.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/jquery.magnific-popup.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/jquery.odometer.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/jquery.appear.js")}}></script>
+        <script src={{url("/mppl/assets/js/jquery.paroller.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/jquery.easypiechart.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/jquery.inview.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/jquery.easing.js")}}></script>
+        <script src={{url("/mppl/assets/js/jquery-ui.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/svg-inject.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/jarallax.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/slick.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/validator.js")}}></script>
+        <script src={{url("/mppl/assets/js/ajax-form.js")}}></script>
+        <script src={{url("/mppl/assets/js/wow.min.js")}}></script>
+        <script src={{url("/mppl/assets/js/main.js")}}></script>
         <script>
             SVGInject(document.querySelectorAll("img.injectable"));
         </script>

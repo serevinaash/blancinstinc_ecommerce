@@ -2,71 +2,6 @@
 
 @section("content")
 <body>
-    <!-- Pre-loader-start -->
-    <div id="preloader">
-      <div class="tg-cube-grid">
-        <div class="tg-cube tg-cube1"></div>
-        <div class="tg-cube tg-cube2"></div>
-        <div class="tg-cube tg-cube3"></div>
-        <div class="tg-cube tg-cube4"></div>
-        <div class="tg-cube tg-cube5"></div>
-        <div class="tg-cube tg-cube6"></div>
-        <div class="tg-cube tg-cube7"></div>
-        <div class="tg-cube tg-cube8"></div>
-        <div class="tg-cube tg-cube9"></div>
-      </div>
-    </div>
-    <!-- Pre-loader-end -->
-
-    <!-- Scroll-top -->
-    <button class="scroll-top scroll-to-target" data-target="html">
-      <i class="fas fa-angle-up"></i>
-    </button>
-    <!-- Scroll-top-end-->
-
-    <!-- header-area -->
-    <header id="home">
-      <div id="header-fixed-height"></div>
-      <div id="sticky-header" class="tg-menu-area menu-area">
-          <div class="container">
-              <div class="row">
-                  <div class="col-12">
-                      <div class="mobile-nav-toggler"><i class="flaticon-layout"></i></div>
-                      <div class="menu-wrap">
-                          <nav class="menu-nav">
-                              <div class="logo">
-                                  <a href="index-2.html">
-                                      <img src={{url("/mppl/assets/img\Parfume-Asset/TRANSPARANTType3.png")}}/>
-                                  </a>
-                              </div>
-                              <div class="navbar-wrap main-menu d-none d-xl-flex">
-                                <ul class="navigation">
-                                                                          <li class="active menu-item-has-children"><a href="index-2.html" class="section-link">Home</a>
-                                  </li>
-                                  <li><a href="blog.html" class="section-link">Blog</a></li>
-                                  <li class="menu-item-has-children"><a href="#shop" class="section-link">Shop</a>
-                            <ul class="sub-menu">
-                                          <li><a href="shop.html">Our Shop</a></li>
-                                          <li><a href="shop-details.html">Shop Details</a></li>
-                                          <li><a href="cart.html">Cart Page</a></li>
-                                          <li><a href="checkout.html">Checkout Page</a></li>
-                                      </ul>
-                                  </li>
-                                  <li><a href="contact.html">Contacts</a></li>
-                                  <li><a href="login.html" class="section-link">Login</a></li>
-                                  <li><a href="register.html"class="section-link">Register</a></li>
-                              </ul>
-                              </div>
-                              <div class="header-btn d-none d-sm-block">
-                                  <a href="index-2.html#shop" class="tg-btn">Order Now</a>
-                              </div>
-                          </nav>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </header>
     <!-- header-area-end -->
 
     <!-- main-area -->
@@ -126,7 +61,7 @@
                       <li>
                         <span><i class="far fa-eye"></i>1.6k Views</span>
                       </li>
-                      
+
                       <li>
                         <span
                           ><i class="far fa-calendar-alt"></i>16th Sept
@@ -196,7 +131,7 @@
                       <li>
                         <span><i class="far fa-eye"></i>1.1k Views</span>
                       </li>
-                      
+
                       <li>
                         <span
                           ><i class="far fa-calendar-alt"></i>24th July
@@ -265,7 +200,7 @@
                       <li>
                         <span><i class="far fa-eye"></i>800 Views</span>
                       </li>
-                      
+
                       <li>
                         <span
                           ><i class="far fa-calendar-alt"></i>19th July
@@ -317,7 +252,7 @@
                   </div>
                   <div class="fix">
                     <h2 class="blog--post--title">
-                      
+
                         Blanc Instinc: Where Elegance Meets Intuition
                       >
                     </h2>
@@ -330,14 +265,14 @@
                   class="blog--post--content post-bg"
                   data-background="assets/img/Parfume-Asset/blog3.png"
                 >
-                  
+
                   <h2 class="blog--post--title">
-                    
+
                       Discover the Essence of Elegance: Blanc Instinc
                       Perfumes
-                    
+
                   </h2>
-              
+
                 </div>
               </div>
             </div>

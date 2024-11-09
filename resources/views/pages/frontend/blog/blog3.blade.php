@@ -2,21 +2,7 @@
 @section("content")
 
 <body>
-    <!-- Pre-loader-start -->
-    <div id="preloader">
-      <div class="tg-cube-grid">
-        <div class="tg-cube tg-cube1"></div>
-        <div class="tg-cube tg-cube2"></div>
-        <div class="tg-cube tg-cube3"></div>
-        <div class="tg-cube tg-cube4"></div>
-        <div class="tg-cube tg-cube5"></div>
-        <div class="tg-cube tg-cube6"></div>
-        <div class="tg-cube tg-cube7"></div>
-        <div class="tg-cube tg-cube8"></div>
-        <div class="tg-cube tg-cube9"></div>
-      </div>
-    </div>
-    <!-- Pre-loader-end -->
+
 
     <!-- Scroll-top -->
     <button class="scroll-top scroll-to-target" data-target="html">
@@ -126,7 +112,7 @@
                       <li>
                         <span><i class="far fa-eye"></i>1.6k Views</span>
                       </li>
-                      
+
                       <li>
                         <span
                           ><i class="far fa-calendar-alt"></i>16th Sept
@@ -196,7 +182,7 @@
                       <li>
                         <span><i class="far fa-eye"></i>1.1k Views</span>
                       </li>
-                      
+
                       <li>
                         <span
                           ><i class="far fa-calendar-alt"></i>24th July
@@ -265,7 +251,7 @@
                       <li>
                         <span><i class="far fa-eye"></i>800 Views</span>
                       </li>
-                      
+
                       <li>
                         <span
                           ><i class="far fa-calendar-alt"></i>19th July
@@ -317,7 +303,7 @@
                   </div>
                   <div class="fix">
                     <h2 class="blog--post--title">
-                      
+
                         Blanc Instinc: Where Elegance Meets Intuition
                       >
                     </h2>
@@ -330,14 +316,14 @@
                   class="blog--post--content post-bg"
                   data-background="assets/img/Parfume-Asset/blog3.png"
                 >
-                  
+
                   <h2 class="blog--post--title">
-                    
+
                       Discover the Essence of Elegance: Blanc Instinc
                       Perfumes
-                    
+
                   </h2>
-              
+
                 </div>
               </div>
             </div>

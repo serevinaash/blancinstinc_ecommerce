@@ -15,7 +15,6 @@
                                         </div>
                                         <div class="footer-social">
                                           <a href="https://www.facebook.com/profile.php?id=61551353680098&ref=xav_ig_profile_web"><i class="fab fa-facebook-f"></i></a>
-
                                             <a href="#"><i class="fab fa-twitter"></i></a>
                                             <a href="https://www.instagram.com/blancinstinc"><i class="fab fa-instagram"></i></a>
                                             <a href="#"><i class="fab fa-linkedin-in"></i></a>

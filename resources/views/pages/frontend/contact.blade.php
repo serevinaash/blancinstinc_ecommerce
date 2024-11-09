@@ -1,162 +1,391 @@
 @extends("layouts.frontend")
 @section("content")
-<!-- Container for demo purpose -->
-<div class="container my-24 mx-auto md:px-6">
-  <!-- Section: Design Block -->
-  <section class="mb-32">
-    <div class="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('https://mdbcdn.b-cdn.net/img/new/textures/full/284.jpg')]"></div>
-    <div class="container px-6 md:px-12">
-      <div
-        class="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
-        <div class="flex flex-wrap">
-          <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
-            <form>
-              <div class="relative mb-6" data-te-input-wrapper-init>
-                <input type="text"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleInput90" placeholder="Name" />
-                <label
-                  class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                  for="exampleInput90">Name
-                </label>
-              </div>
-              <div class="relative mb-6" data-te-input-wrapper-init>
-                <input type="email"
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleInput91" placeholder="Email address" />
-                <label
-                  class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                  for="exampleInput91">Email address
-                </label>
-              </div>
-              <div class="relative mb-6" data-te-input-wrapper-init>
-                <textarea
-                  class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
-                <label for="exampleFormControlTextarea1"
-                  class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary">Message</label>
-              </div>
-              <div class="mb-6 inline-block min-h-[1.5rem] justify-center pl-[1.5rem] md:flex">
-                <input
-                  class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                  type="checkbox" value="" id="exampleCheck96" checked />
-                <label class="inline-block pl-[0.15rem] hover:cursor-pointer" for="exampleCheck96">
-                  Send me a copy of this message
-                </label>
-              </div>
-              <button type="button" data-te-ripple-init data-te-ripple-color="light"
-                class="mb-6 inline-block w-full rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] lg:mb-0">
-                Send
-              </button>
-            </form>
-          </div>
-          <div class="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
-            <div class="flex flex-wrap">
-              <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
-                <div class="flex items-start">
-                  <div class="shrink-0">
-                    <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="ml-6 grow">
-                    <p class="mb-2 font-bold dark:text-white">
-                      Technical support
-                    </p>
-                    <p class="text-neutral-500 dark:text-neutral-200">
-                      support@example.com
-                    </p>
-                    <p class="text-neutral-500 dark:text-neutral-200">
-                      +1 234-567-89
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
-                <div class="flex items-start">
-                  <div class="shrink-0">
-                    <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="ml-6 grow">
-                    <p class="mb-2 font-bold dark:text-white">
-                      Sales questions
-                    </p>
-                    <p class="text-neutral-500 dark:text-neutral-200">
-                      sales@example.com
-                    </p>
-                    <p class="text-neutral-500 dark:text-neutral-200">
-                      +1 234-567-89
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="mb-12 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:mb-12 lg:w-full lg:px-6 xl:w-6/12">
-                <div class="align-start flex">
-                  <div class="shrink-0">
-                    <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="ml-6 grow">
-                    <p class="mb-2 font-bold dark:text-white">Press</p>
-                    <p class="text-neutral-500 dark:text-neutral-200">
-                      press@example.com
-                    </p>
-                    <p class="text-neutral-500 dark:text-neutral-200">
-                      +1 234-567-89
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:mb-12 xl:w-6/12">
-                <div class="align-start flex">
-                  <div class="shrink-0">
-                    <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0112 12.75zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 01-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 002.248-2.354M12 12.75a2.25 2.25 0 01-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 00-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 01.4-2.253M12 8.25a2.25 2.25 0 00-2.248 2.146M12 8.25a2.25 2.25 0 012.248 2.146M8.683 5a6.032 6.032 0 01-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0115.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 00-.575-1.752M4.921 6a24.048 24.048 0 00-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 01-5.223 1.082" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="ml-6 grow">
-                    <p class="mb-2 font-bold dark:text-white">Bug report</p>
-                    <p class="text-neutral-500 dark:text-neutral-200">
-                      bugs@example.com
-                    </p>
-                    <p class="text-neutral-500 dark:text-neutral-200">
-                      +1 234-567-89
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<body>
+
+<!-- Pre-loader-start -->
+<div id="preloader">
+    <div class="tg-cube-grid">
+        <div class="tg-cube tg-cube1"></div>
+        <div class="tg-cube tg-cube2"></div>
+        <div class="tg-cube tg-cube3"></div>
+        <div class="tg-cube tg-cube4"></div>
+        <div class="tg-cube tg-cube5"></div>
+        <div class="tg-cube tg-cube6"></div>
+        <div class="tg-cube tg-cube7"></div>
+        <div class="tg-cube tg-cube8"></div>
+        <div class="tg-cube tg-cube9"></div>
     </div>
-  </section>
-  <!-- Section: Design Block -->
 </div>
-</section>
+<!-- Pre-loader-end -->
 
-<!-- 🛑 Grid Section - Ends Here -->
+<!-- Scroll-top -->
+<button class="scroll-top scroll-to-target" data-target="html">
+    <i class="fas fa-angle-up"></i>
+</button>
+<!-- Scroll-top-end-->
+
+<!-- header-area -->
+<header id="home">
+    <div id="header-fixed-height"></div>
+    <div id="sticky-header" class="tg-menu-area menu-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mobile-nav-toggler"><i class="flaticon-layout"></i></div>
+                    <div class="menu-wrap">
+                        <nav class="menu-nav">
+                            <div class="logo">
+                                <a href="index-2.html">
+                                    <img src="assets/img\Parfume-Asset/TRANSPARANT Type 2.png" alt="Logo">
+                                    <img src={{url("/mppl/assets/img\Parfume-Asset/TRANSPARANTType2.png")}}/>
+                                </a>
+                            </div>
+                            <div class="navbar-wrap main-menu d-none d-xl-flex">
+                                <ul class="navigation">
+                                                                            <li class="active menu-item-has-children"><a href="index-2.html" class="section-link">Home</a>
+                                    </li>
+                                    <li><a href="blog.html" class="section-link">Blog</a></li>
+                                    <li class="menu-item-has-children"><a href="#shop" class="section-link">Shop</a>
+                              <ul class="sub-menu">
+                                            <li><a href="shop.html">Our Shop</a></li>
+                                            <li><a href="shop-details.html">Shop Details</a></li>
+                                            <li><a href="cart.html">Cart Page</a></li>
+                                            <li><a href="checkout.html">Checkout Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contacts</a></li>
+                                    <li><a href="login.html" class="section-link">Login</a></li>
+                                    <li><a href="register.html"class="section-link">Register</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-btn d-none d-sm-block">
+                                <a href="index-2.html#shop" class="tg-btn">Order Now</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header-area-end -->
 
 
-<!-- END: CLIENTS -->
+<!-- main-area -->
+<main class="main-area fix">
+
+    <!-- breadcrumb-area -->
+    <section class="breadcrumb-area breadcrumb-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="title">Contact Us</h2>
+                        <nav aria-label="Breadcrumbs" class="breadcrumb-trail">
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item trail-item trail-begin">
+                                    <a href="index-2.html"><span>Home</span></a>
+                                </li>
+                                <li class="breadcrumb-item trail-item trail-end"><span>Contact Us</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-shape one"><img src="assets/img/others/video_shape01.png" alt="shape"></div>
+        <div class="video-shape two"><img src="assets/img/others/video_shape02.png" alt="shape"></div>
+    </section>
+    <!-- breadcrumb-area-end -->
+
+    <!-- contact-area -->
+    <section class="contact-area">
+        <div class="container">
+            <div class="contact-box-wrapper">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-sm-9">
+                        <div class="contact-box">
+                            <div class="contact-icon">
+                                <span class="overlay-icon"><i class="fas fa-check"></i></span>
+                                <i class="far fa-map"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h5 class="title">Office Address</h5>
+                                <p class="contact-desc">Jl. A.H. Nasution No.105, Cipadung Wetan, Kec. Cibiru, Kota Bandung, Jawa Barat 40614</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-9">
+                        <div class="contact-box">
+                            <div class="contact-icon">
+                                <span class="overlay-icon"><i class="fas fa-check"></i></span>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h5 class="title">Phone Number</h5>
+                                <p class="contact-desc">+62 858-4673-7274<br> +62 877-4437-4332</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-9">
+                        <div class="contact-box">
+                            <div class="contact-icon">
+                                <span class="overlay-icon"><i class="fas fa-check"></i></span>
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h5 class="title">Web Connect</h5>
+                                <p class="contact-desc">info@suxnixmail.com <br> suxnixexample.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact-area-end -->
+
+    <!-- contact-form-end -->
+    <section class="contact-form-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div id="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63370.56487527478!2d107.64153864863282!3d-6.931143600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c302db3434f5%3A0xdf4aacdb8618199c!2sSunan%20Gunung%20Djati%20State%20Islamic%20University%20Bandung!5e0!3m2!1sen!2sid!4v1729483177837!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                            </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="contact-form-wrap">
+                        <div class="section-title mb-50">
+                            <p class="sub-title">Ask Us Anything!</p>
+                            <h2 class="title">Anything you want to know?<br> Ask away!</h2>
+                        </div>
+                        <form id="contact-form" action="inc/contact.php" class="contact-form" data-toggle="validator">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <label for="full-name">Full Name</label>
+                                        <input type="text" id="full-name" placeholder="Enter here" required="required" data-error="Name is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" placeholder="Enter here" required="required" data-error="Email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected disabled>Select Subject</option>
+                                <option value="1">Delivery & Orders</option>
+                                <option value="2">Diet & Exercise</option>
+                                <option value="3">Marketing & Press</option>
+                                <option value="4">Share Your Success</option>
+                                <option value="5">Wholesale And Returns</option>
+                                <option value="6">Other</option>
+
+                            </select>
+                            <div class="form-grp">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" placeholder="Enter here" required="required" data-error="Message is required."></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-btn">
+                                <button type="submit" class="btn">make request</button>
+                            </div>
+                            <div class="messages"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact-form-area-end -->
+
+</main>
+<!-- main-area-end -->
+
+
+<!-- Footer-area -->
+<footer class="footer-area">
+    <div class="footer-instagram">
+        <div class="container">
+            <h2 style="font-size: 2em; font-weight: bold; text-align: center; margin-bottom: 20px;">Web Developers</h2>
+
+            <div class="row g-0 instagram-active">
+
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/serevinaash/?hl=en" target="_blank"><img src="assets/img/others/instagram_post01.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/zah1______/?hl=en" target="_blank"><img src="assets/img/others/instagram_post02.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/_nfzmhn/?hl=en" target="_blank"><img src="assets/img/others/instagram_post03.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/shafadeascr/?hl=en" target="_blank"><img src="assets/img/others/instagram_post04.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/raflipf_/?hl=en" target="_blank"><img src="assets/img/others/instagram_post05.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/serevinaash/?hl=en" target="_blank"><img src="assets/img/others/instagram_post01.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/zah1______/?hl=en" target="_blank"><img src="assets/img/others/instagram_post02.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/_nfzmhn/?hl=en" target="_blank"><img src="assets/img/others/instagram_post03.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/shafadeascr/?hl=en" target="_blank"><img src="assets/img/others/instagram_post04.png" alt="img"></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="footer-insta-item">
+                        <a href="https://www.instagram.com/raflipf_/?hl=en" target="_blank"><img src="assets/img/others/instagram_post05.png" alt="img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-top-wrap">
+        <div class="container">
+            <div class="footer-widgets-wrap">
+                <div class="row">
+                    <div class="col-lg-4 col-md-7">
+                        <div class="footer-widget">
+                            <div class="footer-about">
+                                <div class="footer-logo logo">
+                                        <a href="index-2.html"><img src="assets/img\Parfume-Asset/TRANSPARANT Type 1.png" alt="Logo"></a>
+                                </div>
+                                <div class="footer-text">
+                                    <p>Making beauty especially relating complot especial common questions tend to recur through posts or queries standards vary orem donor command tei.</p>
+                                </div>
+                                <div class="footer-social">
+                                    <a href="https://www.facebook.com/profile.php?id=61551353680098&ref=xav_ig_profile_web"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.instagram.com/blancinstinc"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-sm-6">
+                        <div class="footer-widget">
+                            <h4 class="fw-title">About Us</h4>
+                            <ul class="list-wrap">
+                                <li><a href="#">About Company</a></li>
+                                <li><a href="#">Affiliate Program</a></li>
+                                <li><a href="#">Customer Spotlight</a></li>
+                                <li><a href="#">Reseller Program</a></li>
+                                <li><a href="shop.html">Our Shop</a></li>
+                                <li><a href="#">Price & Plans</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-5 col-sm-6">
+                        <div class="footer-widget">
+                            <h4 class="fw-title">Support</h4>
+                            <ul class="list-wrap">
+                                <li><a href="#">Knowledge Base</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="#">Developer API</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <div class="footer-widget">
+                            <h4 class="fw-title">CONTACT US</h4>
+                            <div class="footer-contact-wrap">
+                                <p>Jl. A.H. Nasution No.105, Cipadung Wetan, Kec. Cibiru, Kota Bandung, Jawa Barat 40614</p>
+                                <ul class="list-wrap">
+                                    <li class="phone"><i class="fas fa-phone"></i> +62 858-4673-7274
+</li>
+                                    <li class="mail"><i class="fas fa-envelope"></i> Suxnix@example.com</li>
+                                    <li class="website"><i class="fas fa-globe"></i> www.suxnixdomain.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-shape one">
+            <img src="assets/img/others/footer_shape01.png" alt="img" class="wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
+        </div>
+        <div class="footer-shape two">
+            <img src="assets/img/others/footer_shape02.png" alt="img" class="wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
+        </div>
+    </div>
+    <div class="copyright-wrap">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="copyright-text">
+                        <p>Copyright © 2024 Suxnix All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="payment-card text-center text-md-end">
+                        <img src="assets/img/others/card_img.png" alt="card">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer-area-end -->
+
+
+
+
+
+<!-- JS here -->
+<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery.odometer.min.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.paroller.min.js"></script>
+<script src="assets/js/jquery.easypiechart.min.js"></script>
+<script src="assets/js/jquery.inview.min.js"></script>
+<script src="assets/js/jquery.easing.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/js/svg-inject.min.js"></script>
+<script src="assets/js/jarallax.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/validator.js"></script>
+<script src="assets/js/ajax-form.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    SVGInject(document.querySelectorAll("img.injectable"));
+</script>
+</body>
 @endsection

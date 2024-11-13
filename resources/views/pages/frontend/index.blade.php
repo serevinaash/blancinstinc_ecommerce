@@ -139,17 +139,19 @@
                 <div class="col-lg-8">
                     <div class="tg-section-title text-center mb-60">
                         <span class="sub-title">RECENT PRODUCTS</span>
-                        <h2 class="title">Supplement PRODUCT</h2>
+                        <h2 class="title">PRODUCT</h2>
                     </div>
                 </div>
             </div>
+
+            @foreach($products as $product)
             <div class="tg-shop-wrapper">
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6 col-sm-9">
                         <div class="tg-shop-item text-center">
                             <div class="tg-shop-thumb">
                                 <span class="new">New</span>
-                                <a href="shop-details.html"><img src="assets/img/Parfume-Asset/BOX/image_4.jpg" alt="img"></a>
+                                <a href="shop-details.html"><img src="{{ $product->galleries()->exists() ? Storage::url($product->galleries->first()->url) : 'placeholder_image_url' }}" alt="{{ $product->name }}"/></a>
                                 <div class="tg-shop-action">
                                     <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
                                     <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
@@ -157,114 +159,18 @@
                                 </div>
                             </div>
                             <div class="tg-shop-content">
+                                    
                                 <div class="tg-shop-cat">
-                                    <a href="shop.html">Nutrition</a>
+                                    <a href="{{ route('details', $product->slug) }}"></a>
                                 </div>
-                                <h4 class="title"><a href="shop-details.html">Box Full of Muscles</a></h4>
-                                <div class="tg-shop-price">$85.99</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-9">
-                        <div class="tg-shop-item text-center">
-                            <div class="tg-shop-thumb">
-                                <span class="discount"> -45%</span>
-                                <a href="shop-details.html"><img src="assets/img/Parfume-Asset/BOX/image_3.jpg" alt="img"></a>
-                                <div class="tg-shop-action">
-                                    <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                                    <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                                    <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="tg-shop-content">
-                                <div class="tg-shop-cat">
-                                    <a href="shop.html">Fat Burners</a>
-                                </div>
-                                <h4 class="title"><a href="shop-details.html">Protein Powder 2kg</a></h4>
-                                <div class="tg-shop-price"><del>$39.99</del> $29.99</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-9">
-                        <div class="tg-shop-item text-center">
-                            <div class="tg-shop-thumb">
-                                <a href="shop-details.html"><img src="assets/img/Parfume-Asset/BOX/image_2.jpg" alt="img"></a>
-                                <div class="tg-shop-action">
-                                    <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                                    <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                                    <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="tg-shop-content">
-                                <div class="tg-shop-cat">
-                                    <a href="shop.html">Fat Burners</a>
-                                </div>
-                                <h4 class="title"><a href="shop-details.html">Amino Energy Health 1kg</a></h4>
-                                <div class="tg-shop-price">$39.99</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-9">
-                        <div class="tg-shop-item text-center">
-                            <div class="tg-shop-thumb">
-                                <span class="discount"> -45%</span>
-                                <a href="shop-details.html"><img src="assets/img/Parfume-Asset/Miring/image_YZS.png" alt="img"></a>
-                                <div class="tg-shop-action">
-                                    <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                                    <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                                    <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="tg-shop-content">
-                                <div class="tg-shop-cat">
-                                    <a href="shop.html">Protein</a>
-                                </div>
-                                <h4 class="title"><a href="shop-details.html">Whey Mass Protein Powder</a></h4>
-                                <div class="tg-shop-price"><del>$29.99</del>$19.99</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-9">
-                        <div class="tg-shop-item text-center">
-                            <div class="tg-shop-thumb">
-                                <a href="shop-details.html"><img src="assets/img/Parfume-Asset/BOX/image_gIZ (2).jpg" alt="img"></a>
-                                <div class="tg-shop-action">
-                                    <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                                    <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                                    <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="tg-shop-content">
-                                <div class="tg-shop-cat">
-                                    <a href="shop.html">Nutrition</a>
-                                </div>
-                                <h4 class="title"><a href="shop-details.html">Antiaging and Longevity</a></h4>
-                                <div class="tg-shop-price">$39.99</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-9">
-                        <div class="tg-shop-item text-center">
-                            <div class="tg-shop-thumb">
-                                <span class="new">New</span>
-                                <a href="shop-details.html"><img src="assets/img/Parfume-Asset/Miring/image_x9u.png" alt="img"></a>
-                                <div class="tg-shop-action">
-                                    <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                                    <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                                    <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="tg-shop-content">
-                                <div class="tg-shop-cat">
-                                    <a href="shop.html">Fat Burners</a>
-                                </div>
-                                <h4 class="title"><a href="shop-details.html">Body Shaping Foods</a></h4>
-                                <div class="tg-shop-price">$29.99</div>
+                                <h4 class="title"><a href="shop-details.html">{{ $product->name }}</a></h4>
+                                <div class="tg-shop-price">IDR {{ number_format($product->price) }}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
     </section>
     <!-- tg-shop-area-end -->

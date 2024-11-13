@@ -8,7 +8,7 @@
                                     <div class="footer-about">
                                         <div class="footer-logo logo">
                                             <a href={{route("index")}}>
-                                             <img src={{url("/mppl/assets\img\Parfume-Asset\TRANSPARANT2.png")}} alt="Logo"></a>
+                                             <img src={{url("/mppl/assets\img\Parfume-Asset\TRANSPARANTType2.png")}} alt="Logo"></a>
                                         </div>
                                         <div class="footer-text">
                                             <p>Questions about beauty often recur across posts or searches, reflecting varied standards and common themes that lead to engaging discussions.</p>
@@ -29,7 +29,8 @@
                                         <div class="footer-post-item">
                                             <div class="thumb">
                                                 <a href="blog-details.html">
-                                                    <img src="assets/img/blog/insta_post01.jpg" alt="img">
+                                                <img src={{url("mppl/assets/img/blog/insta_post01.jpg")}} alt="img">
+                                                    
                                                 </a>
                                             </div>
                                             <div class="content">
@@ -40,7 +41,8 @@
                                         <div class="footer-post-item">
                                             <div class="thumb">
                                                 <a href="blog-details.html">
-                                                    <img src="assets/img/blog/insta_post02.jpg" alt="img">
+                                                <img src={{url("mppl/assets/img/blog/insta_post02.jpg")}} alt="img">
+                                                    
                                                 </a>
                                             </div>
                                             <div class="content">
@@ -75,7 +77,8 @@
                                     </div>
                                     <div class="footer-confidential-wrap">
                                         <div class="confidential-logo">
-                                            <img src="assets/img/others/satisfaction_img.png" alt="img">
+                                        <img src={{url("mppl/assets/img/others/satisfaction_img.png")}} alt="img">
+                                            
                                         </div>
                                         <div class="confidential-content">
                                             <h4 class="con-title">100% Confidential</h4>

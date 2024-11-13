@@ -9,7 +9,7 @@
                                 <nav class="menu-nav">
                                     <div class="logo">
                                         <a href={{route("index")}}>
-                                            <img src={{url("/mppl/assets\img\Parfume-Asset\TRANSPARANT2.png")}} alt="Logo">
+                                            <img src={{url("/mppl/assets\img\Parfume-Asset\TRANSPARANTType2.png")}} alt="lpgoo">
                                         </a>
                                     </div>
                                     <div class="navbar-wrap main-menu d-none d-xl-flex">

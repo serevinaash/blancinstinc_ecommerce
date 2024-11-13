@@ -150,6 +150,7 @@
                             <div class="tg-shop-thumb">
                                 <span class="new">New</span>
                                 <a href="shop-details.html"><img src="assets/img/Parfume-Asset/BOX/image_4.jpg" alt="img"></a>
+                               
                                 <div class="tg-shop-action">
                                     <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
                                     <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>

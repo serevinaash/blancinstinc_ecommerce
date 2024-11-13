@@ -144,33 +144,33 @@
                 </div>
             </div>
 
-            @foreach($products as $product)
             <div class="tg-shop-wrapper">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 col-sm-9">
-                        <div class="tg-shop-item text-center">
-                            <div class="tg-shop-thumb">
-                                <span class="new">New</span>
-                                <a href="shop-details.html"><img src="{{ $product->galleries()->exists() ? Storage::url($product->galleries->first()->url) : 'placeholder_image_url' }}" alt="{{ $product->name }}"/></a>
-                                <div class="tg-shop-action">
-                                    <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
-                                    <a href="cart.html" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
-                                    <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="tg-shop-content">
-                                    
-                                <div class="tg-shop-cat">
-                                    <a href="{{ route('details', $product->slug) }}"></a>
-                                </div>
-                                <h4 class="title"><a href="shop-details.html">{{ $product->name }}</a></h4>
-                                <div class="tg-shop-price">IDR {{ number_format($product->price) }}</div>
-                            </div>
+    <div class="row justify-content-center">
+        @foreach($products as $product)
+            <div class="col-lg-4 col-md-6 col-sm-9">
+                <div class="tg-shop-item text-center">
+                    <div class="tg-shop-thumb">
+                        <span class="new">New</span>
+                        <a href="shop-details.html"><img src="{{ $product->galleries()->exists() ? Storage::url($product->galleries->first()->url) : 'placeholder_image_url' }}" alt="{{ $product->name }}"/></a>
+                        <div class="tg-shop-action">
+                            <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
+                            <a href="{{ route('details', $product->slug) }}" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
+                            <a href="shop-details.html" class="action-item"><i class="flaticon-search"></i></a>
                         </div>
+                    </div>
+                    <div class="tg-shop-content">
+                        <div class="tg-shop-cat">
+                            <a href="{{ route('details', $product->slug) }}"></a>
+                        </div>
+                        <h4 class="title"><a href="shop-details.html">{{ $product->name }}</a></h4>
+                        <div class="tg-shop-price">IDR {{ number_format($product->price) }}</div>
                     </div>
                 </div>
             </div>
-            @endforeach
+        @endforeach
+    </div>
+</div>
+
         </div>
     </section>
     <!-- tg-shop-area-end -->

@@ -47,8 +47,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="video-shape one"><img src="assets/img/others/video_shape01.png" alt="shape"></div>
-                <div class="video-shape two"><img src="assets/img/others/video_shape02.png" alt="shape"></div>
+                <div class="video-shape one"><img src={{url("/mppl/assets/img/others/video_shape01.png")}} alt="shape" /></div>
+            
+            <div class="video-shape two"><img src={{url("/mppl/assets/img/others/video_shape02.png")}} alt="shape" /></div>
             </section>
             <!-- breadcrumb-area-end -->
 
@@ -171,53 +172,31 @@
 
                         <div class="col-2">
                             <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/serevinaash/?hl=en" target="_blank"><img src="assets/img/others/instagram_post01.png" alt="img"></a>
+                                <a href="https://www.instagram.com/serevinaash/?hl=en" target="_blank"><img src={{url("/mppl/assets/img/others/instagram_post01.png")}} alt="img"></a>
+                                
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/zah1______/?hl=en" target="_blank"><img src="assets/img/others/instagram_post02.png" alt="img"></a>
+                                <a href="https://www.instagram.com/zah1______/?hl=en" target="_blank"><img src={{url("/mppl/assets/img/others/instagram_post02.png")}} alt="img"></a>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/_nfzmhn/?hl=en" target="_blank"><img src="assets/img/others/instagram_post03.png" alt="img"></a>
+                                <a href="https://www.instagram.com/_nfzmhn/?hl=en" target="_blank"><img src={{url("/mppl/assets/img/others/instagram_post03.png")}} alt="img"></a>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/shafadeascr/?hl=en" target="_blank"><img src="assets/img/others/instagram_post04.png" alt="img"></a>
+                                <a href="https://www.instagram.com/shafadeascr/?hl=en" target="_blank"><img src={{url("/mppl/assets/img/others/instagram_post04.png")}} alt="img"></a>
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/raflipf_/?hl=en" target="_blank"><img src="assets/img/others/instagram_post05.png" alt="img"></a>
+                                <a href="https://www.instagram.com/raflipf_/?hl=en" target="_blank"><img src={{url("/mppl/assets/img/others/instagram_post05.png")}} alt="img"></a>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/serevinaash/?hl=en" target="_blank"><img src="assets/img/others/instagram_post01.png" alt="img"></a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/zah1______/?hl=en" target="_blank"><img src="assets/img/others/instagram_post02.png" alt="img"></a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/_nfzmhn/?hl=en" target="_blank"><img src="assets/img/others/instagram_post03.png" alt="img"></a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/shafadeascr/?hl=en" target="_blank"><img src="assets/img/others/instagram_post04.png" alt="img"></a>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="footer-insta-item">
-                                <a href="https://www.instagram.com/raflipf_/?hl=en" target="_blank"><img src="assets/img/others/instagram_post05.png" alt="img"></a>
-                            </div>
+                       
                         </div>
                     </div>
                 </div>
@@ -231,7 +210,8 @@
                                 <div class="footer-widget">
                                     <div class="footer-about">
                                         <div class="footer-logo logo">
-                                                <a href="index-2.html"><img src="assets/img\Parfume-Asset/TRANSPARANT Type 1.png" alt="Logo"></a>
+                                                <a href="index-2.html"><img src={{url("/mppl/assets/img\Parfume-Asset/TRANSPARANTType1.png")}} alt="Logo"></a>
+                                                
                                         </div>
                                         <div class="footer-text">
                                             <p>Making beauty especially relating complot especial common questions tend to recur through posts or queries standards vary orem donor command tei.</p>
@@ -289,10 +269,12 @@
                     </div>
                 </div>
                 <div class="footer-shape one">
-                    <img src="assets/img/others/footer_shape01.png" alt="img" class="wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
+                    <img src={{url("/mppl/assets/img/others/footer_shape01.png")}} alt="img" class="wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
+                    
                 </div>
                 <div class="footer-shape two">
-                    <img src="assets/img/others/footer_shape02.png" alt="img" class="wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
+                    <img src={{url("/mppl/assets/img/others/footer_shape02.png")}} alt="img" class="wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
+                    
                 </div>
             </div>
             <div class="copyright-wrap">
@@ -305,7 +287,8 @@
                         </div>
                         <div class="col-md-5">
                             <div class="payment-card text-center text-md-end">
-                                <img src="assets/img/others/card_img.png" alt="card">
+                                <img src={{url("/mppl/assets/img/others/card_img.png")}} alt="card">
+                                
                             </div>
                         </div>
                     </div>
@@ -352,10 +335,11 @@
                     </div>
                 </div>
                 <div class="footer-shape one">
-                    <img src="assets/img/others/footer_shape01.png" alt="img" class="wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
+                <img src={{url("/mppl/assets/img/others/footer_shape01.png")}} alt="img" class="wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
+                    
                 </div>
                 <div class="footer-shape two">
-                    <img src="assets/img/others/footer_shape02.png" alt="img" class="wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
+                <img src={{url("/mppl/assets/img/others/footer_shape02.png")}} alt="img" class="wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="1s">
                 </div>
             </div>
             <div class="copyright-wrap">
@@ -368,7 +352,9 @@
                         </div>
                         <div class="col-md-5">
                             <div class="payment-card text-center text-md-end">
-                                <img src="assets/img/others/card_img.png" alt="card">
+                                <img src={{url("/mppl/assets/img/others/card_img.png")}} alt="card">
+                                
+
                             </div>
                         </div>
                     </div>

@@ -26,12 +26,6 @@
               </div>
             </div>
           </div>
-          <div class="video-shape one">
-            <img src="assets/img/others/video_shape01.png" alt="shape" />
-          </div>
-          <div class="video-shape two">
-            <img src="assets/img/others/video_shape02.png" alt="shape" />
-          </div>
         </section>
         <!-- breadcrumb-area-end -->
 
@@ -43,8 +37,8 @@
                 <div class="blog--post--item mb-40">
                   <div class="blog--post--thumb">
                     <a href="blog-details.html"
-                      ><img src="assets/img/Parfume-Asset/blog1.png" alt="img"
-                    /></a>
+                      > <img src={{url("/mppl/assets/img/Parfume-Asset/blog1.png")}}/>
+                    </a>
                   </div>
                   <div class="blog--post--content">
                     <div class="blog--tag">
@@ -85,7 +79,7 @@
                       <div class="blog--post--avatar">
                         <div class="blog--avatar--img">
                           <img
-                            src="assets/img/Parfume-Asset/userblog.png"
+                          img src={{url("/mppl/assets/img/Parfume-Asset/userblog.png")}}
                             alt="img"
                           />
                         </div>
@@ -105,7 +99,7 @@
                   <div class="blog--post--thumb position-relative">
                     <a href="blog-details.html"
                       ><img
-                        src="assets/img/Parfume-Asset/blog2.png"
+                      img src={{url("/mppl/assets/img/Parfume-Asset/blog2.png")}}
                         alt="img"
                     /></a>
                     <a
@@ -156,7 +150,7 @@
                       <div class="blog--post--avatar">
                         <div class="blog--avatar--img">
                           <img
-                            src="assets/img/Parfume-Asset/userblog2.png"
+                            img src={{url("/mppl/assets/img/Parfume-Asset/userblog2.png")}}
                             alt="img"
                           />
                         </div>
@@ -175,13 +169,22 @@
                 <div class="blog--post--item mb-40">
                   <div class="blog--post--thumb blog-thumb-active">
                     <div class="slide-post">
-                      <img src="assets/img/Parfume-Asset/blogslide1.png" alt="" />
+                      <img
+                            img src={{url("/mppl/assets/img/Parfume-Asset/blogslide1.png")}}
+                            alt="img"
+                          />
                     </div>
                     <div class="slide-post">
-                      <img src="assets/img/Parfume-Asset/blogslide2.png" alt="" />
+                      <img
+                            img src={{url("/mppl/assets/img/Parfume-Asset/blogslide2.png")}}
+                            alt="img"
+                          />
                     </div>
                     <div class="slide-post">
-                      <img src="assets/img/Parfume-Asset/blogslide3.png" alt="" />
+                      <img
+                            img src={{url("/mppl/assets/img/Parfume-Asset/blogslide3.png")}}
+                            alt="img"
+                          />
                     </div>
                   </div>
                   <div class="blog--post--content">
@@ -223,8 +226,8 @@
                     <div class="blog--post--bottom">
                       <div class="blog--post--avatar">
                         <div class="blog--avatar--img">
-                          <img
-                            src="assets/img/Parfume-Asset/userblog3.png"
+                            <img
+                            img src={{url("/mppl/assets/img/Parfume-Asset/userblog3.png")}}
                             alt="img"
                           />
                         </div>
@@ -244,10 +247,11 @@
                 <div class="blog--post--item mb-40">
                   <div
                     class="blog--post--content quote-post"
-                    data-background="assets/img/Parfume-Asset/5.png"
+                    data-background={{url("/mppl/assets/img/Parfume-Asset/5.png")}}
+                    
                   >
                     <div class="quote-icon">
-                      <img src="assets/img/icons/blockquote.png" alt="" />
+                      <img src={{url("/mppl/assets/img/icons/blockquote.png")}} />
                     </div>
                     <div class="fix">
                       <h2 class="blog--post--title">
@@ -262,7 +266,8 @@
                 <div class="blog--post--item mb-40">
                   <div
                     class="blog--post--content post-bg"
-                    data-background="assets/img/Parfume-Asset/blog3.png"
+                    data-background={{url("/mppl/assets/img/Parfume-Asset/blog3.png")}}
+                    
                   >
 
                     <h2 class="blog--post--title">
@@ -282,8 +287,8 @@
                       <h3 class="title">About Us</h3>
                     </div>
                     <div class="blog-about text-center">
-                      <div class="blog-avatar-img mb-25">
-                        <img src="assets/img/Parfume-Asset/aboutus.png" alt="img" />
+                      <div class="blog-avatar-img mb-25"> 
+                        <img src={{url("/mppl/assets/img/Parfume-Asset/aboutus.png")}} />
                       </div>
                       <div class="b-about-content mb-20">
                         <h4>BlancInstinc</h4>

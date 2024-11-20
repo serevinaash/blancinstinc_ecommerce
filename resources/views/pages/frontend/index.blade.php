@@ -159,8 +159,10 @@
             <div class="col-lg-4 col-md-6 col-sm-9">
                 <div class="tg-shop-item text-center">
                     <div class="tg-shop-thumb">
+                    <a href="{{ route('details', $product->slug) }}">
                         <span class="new">New</span>
                         <a href="shop-details.html"><img src="{{ $product->galleries()->exists() ? Storage::url($product->galleries->first()->url) : 'placeholder_image_url' }}" alt="{{ $product->name }}"/></a>
+
                         <div class="tg-shop-action">
                             <a href="shop-details.html" class="action-item"><i class="far fa-heart"></i></a>
                             <a href="{{ route('details', $product->slug) }}" class="action-item"><i class="flaticon-shopping-cart-1"></i></a>
@@ -176,6 +178,7 @@
                     </div>
                 </div>
             </div>
+            </a>
         @endforeach
     </div>
 </div>

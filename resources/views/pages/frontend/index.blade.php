@@ -211,7 +211,7 @@
                                     <p>(1 x 250 veggie caps bottle)</p>
                                 </div>
                                 <div class="pricing-img">
-                                    <img src="assets/img/Parfume-Asset/Parfume-Bundle (1).png" alt="img">
+                                    <img src={{url("/mppl/assets/img/Parfume-Asset/Parfume-Bundle(1).png")}}/ alt="img">
                                 </div>
                                 <div class="pricing-price">
                                     <h4 class="price">$69</h4>
@@ -226,7 +226,7 @@
                                     <a href="contact.html">Buy Now <span>365 Day Full Money Back Guaranteed</span></a>
                                 </div>
                                 <div class="bottom-img">
-                                    <img src="assets/img/others/pricing_bottom_img.png" alt="card">
+                                    <img src={{url("/mppl/assets/img/others/pricing_bottom_img.png")}}/ alt="card">
                                 </div>
                             </div>
                         </div>
@@ -243,7 +243,7 @@
                                     <p>(3 x 250 veggie caps bottle)</p>
                                 </div>
                                 <div class="pricing-img">
-                                    <img src="assets/img/Parfume-Asset/Parfume-Bundle (3).png" alt="img">
+                                    <img src={{url("/mppl/assets/img/Parfume-Asset/Parfume-Bundle(3).png")}}/ alt="img">
                                 </div>
                                 <div class="pricing-price">
                                     <h4 class="price">$59</h4>
@@ -258,7 +258,7 @@
                                     <a href="contact.html">Buy Now <span>365 Day Full Money Back Guaranteed</span></a>
                                 </div>
                                 <div class="bottom-img">
-                                    <img src="assets/img/others/pricing_bottom_img.png" alt="card">
+                                    <img src={{url("/mppl/assets/img/others/pricing_bottom_img.png")}}/ alt="card">
                                 </div>
                             </div>
                         </div>
@@ -275,7 +275,7 @@
                                     <p>(6 x 250 veggie caps bottle)</p>
                                 </div>
                                 <div class="pricing-img">
-                                    <img src="assets/img/Parfume-Asset/Parfume-Bundle (2).png" alt="img">
+                                    <img src={{url("/mppl/assets/img/Parfume-Asset/Parfume-Bundle(2).png")}}/ alt="img">
                                 </div>
                                 <div class="pricing-price">
                                     <h4 class="price">$49</h4>
@@ -290,7 +290,7 @@
                                     <a href="contact.html">Buy Now <span>365 Day Full Money Back Guaranteed</span></a>
                                 </div>
                                 <div class="bottom-img">
-                                    <img src="assets/img/others/pricing_bottom_img.png" alt="img">
+                                    <img src={{url("/mppl/assets/img/others/pricing_bottom_img.png")}}/ alt="card">
                                 </div>
                             </div>
                         </div>
@@ -318,7 +318,7 @@
                         <div class="col-lg-6">
                             <div class="tg-testimonial-item">
                                 <div class="tg-testimonial-thumb">
-                                    <img src="assets/img/others/testi_img01.jpg" alt="">
+                                    <img src={{url("/mppl/assets/img/others/testi_img01.jpg")}}/ alt="">
                                 </div>
                                 <div class="tg-testimonial-content">
                                     <div class="rating">
@@ -337,7 +337,7 @@
                         <div class="col-lg-6">
                             <div class="tg-testimonial-item">
                                 <div class="tg-testimonial-thumb">
-                                    <img src="assets/img/others/testi_img02.jpg" alt="">
+                                <img src={{url("/mppl/assets/img/others/testi_img02.jpg")}}/ alt="">
                                 </div>
                                 <div class="tg-testimonial-content">
                                     <div class="rating">
@@ -356,7 +356,7 @@
                         <div class="col-lg-6">
                             <div class="tg-testimonial-item">
                                 <div class="tg-testimonial-thumb">
-                                    <img src="assets/img/others/testi_img02.jpg" alt="">
+                                <img src={{url("/mppl/assets/img/others/testi_img02.jpg")}}/ alt="">
                                 </div>
                                 <div class="tg-testimonial-content">
                                     <div class="rating">
@@ -375,7 +375,7 @@
                         <div class="col-lg-6">
                             <div class="tg-testimonial-item">
                                 <div class="tg-testimonial-thumb">
-                                    <img src="assets/img/others/testi_img01.jpg" alt="">
+                                <img src={{url("/mppl/assets/img/others/testi_img01.jpg")}}/ alt="">
                                 </div>
                                 <div class="tg-testimonial-content">
                                     <div class="rating">
@@ -413,7 +413,8 @@
                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
                     <div class="tg-blog-post-item mb-30 wow fadeInUp" data-wow-delay=".2s">
                         <div class="tg-blog-post-thumb">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog_post_thumb01.jpg" alt=""></a>
+                            <a href="blog-details.html"><img src={{url("/mppl/assets/img/blog/blog_post_thumb01.jpg")}}/ alt=""></a>
+                            
                             <div class="tg-blog-overlay-tag">
                                 <a href="#">Foods</a>
                             </div>
@@ -428,7 +429,7 @@
                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
                     <div class="tg-blog-post-item mb-30 wow fadeInUp" data-wow-delay=".4s">
                         <div class="tg-blog-post-thumb">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog_post_thumb02.jpg" alt=""></a>
+                            <a href="blog-details.html"><img src={{url("/mppl/assets/img/blog/blog_post_thumb02.jpg")}}/ alt=""></a>
                             <div class="tg-blog-overlay-tag">
                                 <a href="#">Gym</a>
                             </div>
@@ -443,7 +444,7 @@
                 <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
                     <div class="tg-blog-post-item mb-30 wow fadeInUp" data-wow-delay=".6s">
                         <div class="tg-blog-post-thumb">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog_post_thumb03.jpg" alt=""></a>
+                            <a href="blog-details.html"><img src={{url("/mppl/assets/img/blog/blog_post_thumb03.jpg")}}/ alt=""></a>
                             <div class="tg-blog-overlay-tag">
                                 <a href="#">Fitness</a>
                             </div>

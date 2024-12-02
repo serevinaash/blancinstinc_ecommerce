@@ -398,68 +398,7 @@
     </section>
     <!-- testimonial-area-end -->
 
-    <!-- blog-area -->
-    <section id="news" class="tg-blog-area pt-120 pb-90">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-8">
-                    <div class="tg-section-title text-center mb-60">
-                        <h6 class="sub-title">Latest News</h6>
-                        <h2 class="title">BlancInstinc News Feeds</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
-                    <div class="tg-blog-post-item mb-30 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="tg-blog-post-thumb">
-                            <a href="blog-details.html"><img src={{url("/mppl/assets/img/blog/blog_post_thumb01.jpg")}}/ alt=""></a>
 
-                            <div class="tg-blog-overlay-tag">
-                                <a href="#">Foods</a>
-                            </div>
-                        </div>
-                        <div class="tg-blog-post-content">
-                            <div class="post-date"><i class="far fa-calendar-alt"></i> 24th September 2024</div>
-                            <h4 class="title"><a href="blog-details.html">Lorem ipsum dolor consectetur sit amet adipisicing</a></h4>
-                            <a href="blog-details.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
-                    <div class="tg-blog-post-item mb-30 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="tg-blog-post-thumb">
-                            <a href="blog-details.html"><img src={{url("/mppl/assets/img/blog/blog_post_thumb02.jpg")}}/ alt=""></a>
-                            <div class="tg-blog-overlay-tag">
-                                <a href="#">Gym</a>
-                            </div>
-                        </div>
-                        <div class="tg-blog-post-content">
-                            <div class="post-date"><i class="far fa-calendar-alt"></i> 24th September 2024</div>
-                            <h4 class="title"><a href="blog-details.html">Best ways to support your healthy immune system</a></h4>
-                            <a href="blog-details.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
-                    <div class="tg-blog-post-item mb-30 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="tg-blog-post-thumb">
-                            <a href="blog-details.html"><img src={{url("/mppl/assets/img/blog/blog_post_thumb03.jpg")}}/ alt=""></a>
-                            <div class="tg-blog-overlay-tag">
-                                <a href="#">Fitness</a>
-                            </div>
-                        </div>
-                        <div class="tg-blog-post-content">
-                            <div class="post-date"><i class="far fa-calendar-alt"></i> 24th September 2024</div>
-                            <h4 class="title"><a href="blog-details.html">Organic food is produced methods complying</a></h4>
-                            <a href="blog-details.html" class="read-more"><span>Read More</span> <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- blog-area-end -->
 
 </main>
 <!-- main-area-end -->

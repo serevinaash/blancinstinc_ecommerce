@@ -134,9 +134,9 @@
                                                     <span class="total-rating">(20)</span>
                                                 </div>
                                                 <div class="shop-content-bottom">
-                                                    <a href="cart.html" class="cart"><i
+                                                    <a href="{{ route('cart') }}" class="cart"><i
                                                             class="flaticon-shopping-cart-1"></i></a>
-                                                    <a href="shop-details.html" class="btn btn-two">Buy Now</a>
+                                                    <a href="{{ route('details', $product->slug) }}" class="btn btn-two">Buy Now</a>
                                                 </div>
                                             </div>
                                         </div>

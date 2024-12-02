@@ -57,9 +57,11 @@ class FrontendController extends Controller
     public function contact(Request $request){
         return view("pages.frontend.contact");
     }
-    public function shop(Request $request){
-        return view("pages.frontend.shop");
-    }
+        public function shop(Request $request){
+            $products = Product::paginate(10);
+            $products=Product::with(['galleries'])->latest()->get();
+            return view("pages.frontend.shop", compact('products'));
+        }
     public function shopDetails(Request $request){
         return view("pages.frontend.shopDetails");
     }
@@ -77,23 +79,23 @@ class FrontendController extends Controller
 
     public function checkout(CheckoutRequest $request){
         $data = $request->all();
-    
+
         // Get Carts Data
         $carts = Cart::with(["product"])->where("users_id", Auth::user()->id)->get();
-    
+
         // Calculate total price from cart items
         $totalPrice = $carts->sum("product.price");
-    
+
         // Add fixed amount of 20000 to the total price
         $totalPrice += 15000;
-    
-        // Add to Transaction data  
+
+        // Add to Transaction data
         $data["users_id"] = Auth::user()->id;
-        $data["total_price"] = $totalPrice;    
+        $data["total_price"] = $totalPrice;
 
         // Create transaction
         $transaction=Transaction::create($data);
-        
+
         // Create  transaction item
         foreach($carts as $cart){
             $items[]=ItemTransaction::create(["transactions_id" => $transaction->id,"users_id" => $cart->users_id, "products_id" => $cart->products_id]);

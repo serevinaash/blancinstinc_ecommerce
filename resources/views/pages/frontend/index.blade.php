@@ -208,7 +208,8 @@
                                     <p>(1 x 250 veggie caps bottle)</p>
                                 </div>
                                 <div class="pricing-img">
-                                    <img src="assets/img/Parfume-Asset/Parfume-Bundle (1).png" alt="img">
+                                    <img src="{{url("/mppl/ssets/img/Parfume-Asset/Parfume-Bundle1.png")}}" alt="img">
+
                                 </div>
                                 <div class="pricing-price">
                                     <h4 class="price">$69</h4>
@@ -304,8 +305,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="tg-section-title white text-center mb-60">
-                        <span class="sub-title">recommend doctors</span>
-                        <h2 class="title white-text">recommended by doctors</h2>
+                        <span class="sub-title">recommend artist</span>
+                        <h2 class="title white-text">recommended by artist</h2>
                     </div>
                 </div>
             </div>

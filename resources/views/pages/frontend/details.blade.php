@@ -46,16 +46,16 @@
                         @endforeach
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
-            
+
             <!-- Bagian Detail Produk -->
             <div class="col-lg-6">
                 <div class="inner-shop-details-content">
                     <!-- Nama Produk -->
                     <h4 class="title">{{$product->name}}</h4>
-                    
+
                     <!-- Harga dan Status Stok -->
                     <div class="inner-shop-details-price">
                         <h2 class="price">IDR {{number_format($product->price)}}</h2>
@@ -82,7 +82,7 @@
                     <!-- Deskripsi Produk -->
                     <p class="text-xl leading-7 mb-6">{!! $product->description !!}</p>
 
-          
+
 
                     <!-- Tombol Add to Cart -->
                     <div class="inner-shop-perched-info">

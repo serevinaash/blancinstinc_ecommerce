@@ -24,6 +24,7 @@ Route::get('/shop', [FrontendController::class, "shop"])->name("shop");
 Route::get('/shopDetails', [FrontendController::class, "shopDetails"])->name("shopDetails");
 Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
 Route::get('/cartPage', [FrontendController::class, 'cartPage'])->name('cartPage');
+Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout');
 
 
 // Route::middleware([
@@ -44,7 +45,7 @@ Route::middleware(['auth:sanctum', 'verified'])->name("dashboard.")->prefix('das
         'show',
     );
 
-    
+
         Route::resource('product', ProductController::class);
         Route::resource('product.gallery', ProductGalleryController::class)->shallow()->only(
             'index',
@@ -74,4 +75,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::delete("/cart/{id}", [FrontendController::class, "cartDelete"])->name("cart-delete");
     Route::post("/checkout", [FrontendController::class, "checkout"])->name("checkout");
     Route::get("/checkout/success", [FrontendController::class, "success"])->name("checkout-sucess");
+
 });

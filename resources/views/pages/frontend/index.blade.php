@@ -103,7 +103,7 @@
                                 <h2 class="title">growth promoter <br> supplement</h2>
                             </div>
                             <p>Vitamin Ipsum is simply dummy text of the printing and tysetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley.</p>
-                            <a href="shop.html" class="tg-btn view-btn">VIEW more</a>
+                            <a href="{{route ("shop")}}" class="tg-btn view-btn">VIEW more</a>
                         </div>
                     </div>
                 </div>

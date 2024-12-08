@@ -151,18 +151,13 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="col-lg-4">
-                                    <div class="cart__collaterals-wrap">
-                                        <h2 class="title">Cart totals</h2>
-                                        <ul class="list-wrap">
-                                            <li>Subtotal <span>Rp{{ number_format($cart->subtotal, 2) }}</span></li>
-                                               </ul>
+
                                         <button class="btn btn-sm">Proceed to checkout</a>
                                     </div>
                                 </div>
 
                                 </div>
-                                </form>
+                            </form>
                         </div>
                 </div>
             </div>

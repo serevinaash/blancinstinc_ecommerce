@@ -101,7 +101,7 @@
                                 <div class="form-grp">
                                     <label for="complete-name">Nama lengkap</label>
                                     <input type="text"  name="name"
-                  id="complete-name">
+                  id="complete-name"  id="complete-name">
                                 </div>
 
 
@@ -109,13 +109,13 @@
                                     <div class="col-md-6">
                                         <div class="form-grp">
                                             <label for="phone">Phone *</label>
-                                            <input type="number" id="phone">
+                                            <input type="number" name="phone" id="phone">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-grp">
                                             <label for="email">Email address *</label>
-                                            <input type="email" id="email">
+                                            <input type="email" name="email" id="email">
                                         </div>
                                     </div>
                                 </div>
@@ -123,6 +123,7 @@
                                     <label for="complete-name">Alamat lengkap</label>
                                     <input type="text" name="address" id="address">
                                 </div>
+
                                 <div class="flex flex-col mb-4" style="display: none;">
                                     <label for="complete-name" class="text-sm mb-2">Choose Payment</label>
                                     <div class="flex -mx-2 flex-wrap">

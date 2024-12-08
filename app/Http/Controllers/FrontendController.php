@@ -26,17 +26,43 @@ class FrontendController extends Controller
         return view("pages.frontend.details", compact('product','recommendations'));
     }
 
-    public function cartAdd(Request $request, $id){
+    public function cartAdd(Request $request, $id)
+{
+    // Periksa apakah produk sudah ada di keranjang
+    $cartItem = Cart::where('users_id', Auth::user()->id)
+                    ->where('products_id', $id)
+                    ->first();
+
+    if ($cartItem) {
+        // Tambahkan kuantitas jika sudah ada
+        $cartItem->quantity += 1; // Increment kuantitas
+        $cartItem->save();
+    } else {
+        // Tambahkan produk baru ke keranjang
         Cart::create([
             "users_id" => Auth::user()->id,
-            "products_id" => $id
+            "products_id" => $id,
+            "quantity" => 1, // Default kuantitas
         ]);
-        return redirect("cart");
     }
 
-    public function cart(Request $request){
-        $carts=Cart::with(['product.galleries'])->where('users_id', Auth::user()->id)->get();
-        return view("pages.frontend.cart", compact("carts"));
+    return redirect("cart")->with('success', 'Product added to cart successfully.');
+}
+
+
+
+    public function cart(Request $request)
+    {
+        $carts = Cart::with(['product.galleries'])->where('users_id', Auth::user()->id)->get();
+
+        $totalPrice = 0; // Inisialisasi total harga
+        foreach ($carts as $cart) {
+            $cart->subtotal = $cart->product->price * ($cart->quantity ?? 1);
+            $totalPrice += $cart->subtotal; // Tambahkan subtotal ke total keseluruhan
+        }
+
+        return view('pages.frontend.cart', compact('carts', 'totalPrice'));
+        // Pastikan 'totalPrice' dikirim ke view
     }
 
     public function success(Request $request){
@@ -77,64 +103,70 @@ class FrontendController extends Controller
         return redirect("cart");
     }
 
-    public function checkout(CheckoutRequest $request){
-        $data = $request->all();
+public function checkout(CheckoutRequest $request)
+{
+    $data = $request->all();
 
-        // Get Carts Data
-        $carts = Cart::with(["product"])->where("users_id", Auth::user()->id)->get();
+    // Get Carts Data
+    $carts = Cart::with(["product"])->where("users_id", Auth::user()->id)->get();
 
-        // Calculate total price from cart items
-        $totalPrice = $carts->sum("product.price");
+    // Calculate total price from cart items
+    $totalPrice = $carts->sum("product.price");
 
-        // Add fixed amount of 20000 to the total price
-        $totalPrice += 15000;
+    // Add fixed amount of 15000 to the total price
+    $totalPrice += 15000;
 
-        // Add to Transaction data
-        $data["users_id"] = Auth::user()->id;
-        $data["total_price"] = $totalPrice;
+    // Add to Transaction data
+    $data["users_id"] = Auth::user()->id;
+    $data["total_price"] = $totalPrice;
 
-        // Create transaction
-        $transaction=Transaction::create($data);
+    // Create transaction
+    $transaction = Transaction::create($data);
 
-        // Create  transaction item
-        foreach($carts as $cart){
-            $items[]=ItemTransaction::create(["transactions_id" => $transaction->id,"users_id" => $cart->users_id, "products_id" => $cart->products_id]);
-        }
-
-        // Delete cart after transaction
-        Cart::where("users_id", Auth::user()->id)->delete();
-
-        // Konfigurasi midtrans
-        Config::$serverKey=config("services.midtrans.serverKey");
-        Config::$isProduction=config("services.midtrans.isProduction");
-        Config::$isSanitized=config("services.midtrans.isSanitized");
-        Config::$is3ds=config("services.midtrans.is3ds");
-
-        // Setup variable midtrans
-        $midtrans=[
-            "transaction_details" => [
-                "order_id" => "LUX-".$transaction->id,
-                "gross_amount" => (int) $transaction->total_price
-            ],
-            "customer_details" => [
-                "first_name" => $transaction->name,
-                "email" => $transaction->email,
-            ],
-            "enabled_payment" => ["gopay","bank_transfer"],
-            "vtweb" => []
-        ];
-
-        // Payment process
-        try{
-            $paymentUrl=Snap::createTransaction($midtrans)->redirect_url;
-            $transaction->payment_url=$paymentUrl;
-            $transaction->save();
-
-            return redirect($paymentUrl);
-        }catch(Exception $except){
-            echo $except->getMessage();
-        }
-
-        return $request->all();
+    // Create transaction items
+    foreach ($carts as $cart) {
+        ItemTransaction::create([
+            "transactions_id" => $transaction->id,
+            "users_id" => $cart->users_id,
+            "products_id" => $cart->products_id
+        ]);
     }
+
+    // Delete cart after transaction
+    Cart::where("users_id", Auth::user()->id)->delete();
+
+    // Midtrans Configuration
+    Config::$serverKey = config("services.midtrans.serverKey");
+    Config::$isProduction = config("services.midtrans.isProduction");
+    Config::$isSanitized = config("services.midtrans.isSanitized");
+    Config::$is3ds = config("services.midtrans.is3ds");
+
+    // Setup Midtrans payment details
+    $midtrans = [
+        "transaction_details" => [
+            "order_id" => "LUX-" . $transaction->id,
+            "gross_amount" => (int) $transaction->total_price
+        ],
+        "customer_details" => [
+            "first_name" => $transaction->name,
+            "email" => $transaction->email,
+        ],
+        "enabled_payment" => ["gopay", "bank_transfer"],
+        "vtweb" => []
+    ];
+
+    // Payment process
+    try {
+        $paymentUrl = Snap::createTransaction($midtrans)->redirect_url;
+        $transaction->payment_url = $paymentUrl;
+        $transaction->save();
+
+        // Redirect to payment URL
+        return redirect($paymentUrl);
+    } catch (Exception $except) {
+        // Handle exception and show error
+        return redirect()->route('cart-page')->with('error', 'Payment failed: ' . $except->getMessage());
+    }
+}
+
 }

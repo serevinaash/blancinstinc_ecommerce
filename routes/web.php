@@ -24,8 +24,6 @@ Route::get('/shop', [FrontendController::class, "shop"])->name("shop");
 Route::get('/shopDetails', [FrontendController::class, "shopDetails"])->name("shopDetails");
 Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
 Route::get('/cartPage', [FrontendController::class, 'cartPage'])->name('cartPage');
-Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout');
-
 
 // Route::middleware([
 //     'auth:sanctum',

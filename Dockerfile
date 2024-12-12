@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     git \
     unzip \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Instal ekstensi PHP yang diperlukan
@@ -26,12 +27,17 @@ RUN apt-get update && apt-get install -y yarn
 # Salin file aplikasi Anda ke dalam container
 COPY . /var/www/html/
 
-# Instal dependensi PHP menggunakan Composer setelah menyalin file Laravel
+# Setel direktori kerja untuk Laravel
 WORKDIR /var/www/html
+
+# Instal dependensi PHP menggunakan Composer
 RUN composer install --no-dev --optimize-autoloader
 
 # Instal dependensi frontend menggunakan Yarn
-RUN yarn install && yarn prod
+RUN yarn install
+
+# Proses build untuk produksi (misalnya, dengan 'yarn prod' jika itu tersedia dalam package.json Anda)
+RUN yarn run prod
 
 # Setel izin folder storage dan bootstrap/cache untuk Laravel
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache

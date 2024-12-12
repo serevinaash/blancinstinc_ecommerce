@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     git \
     unzip \
     curl \
+    gnupg2 \
     && rm -rf /var/lib/apt/lists/*
 
 # Instal ekstensi PHP yang diperlukan
@@ -33,7 +34,7 @@ WORKDIR /var/www/html
 # Instal dependensi PHP menggunakan Composer
 RUN composer install --no-dev --optimize-autoloader
 
-# Periksa versi yarn
+# Periksa versi Yarn
 RUN yarn --version
 
 # Instal dependensi frontend menggunakan Yarn

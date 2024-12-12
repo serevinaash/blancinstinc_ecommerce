@@ -1,50 +1,40 @@
-# Gunakan image resmi PHP sebagai base image
-FROM php:8.1-fpm
+# Gunakan image PHP dengan Apache
+FROM php:8.1-apache
 
-# Set working directory di dalam container
-WORKDIR /app
+# Instal dependensi sistem untuk ekstensi PHP dan MySQL
+RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev libzip-dev git unzip libpdo-mysql
 
-# Install sistem dependensi yang diperlukan (untuk Laravel)
-RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg62-turbo-dev \
-    libfreetype6-dev \
-    libzip-dev \
-    git \
-    unzip \
-    curl \
-    && docker-php-ext-configure zip \
-    && docker-php-ext-install gd zip
+# Instal ekstensi PHP yang diperlukan
+RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
+    && docker-php-ext-install pdo_mysql
 
-# Install Composer (dependency manager untuk PHP)
+# Instal Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install Node.js (diperlukan untuk npm dan yarn)
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install -y nodejs
+# Instal Yarn (untuk manajemen dependensi frontend)
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | tee /etc/apt/trusted.gpg.d/yarn.asc
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update && apt-get install -y yarn
 
-# Install Yarn
-RUN npm install -g yarn
-
-# Copy seluruh kode aplikasi ke dalam container
-COPY . /app
-
-# Install dependensi PHP melalui Composer
+# Instal dependensi PHP menggunakan Composer
+COPY composer.json composer.lock /var/www/html/
 RUN composer install --no-dev --optimize-autoloader
 
-# Install dependensi JavaScript melalui Yarn
-RUN yarn install
+# Salin file aplikasi Anda ke dalam container
+COPY . /var/www/html/
 
-# Run production build untuk frontend assets
-RUN yarn prod
+# Instal dependensi frontend menggunakan Yarn
+WORKDIR /var/www/html
+RUN yarn install && yarn prod
 
-# Optimalkan aplikasi Laravel (cache routes, views, dll)
-RUN php artisan optimize && php artisan view:cache
+# Setel izin folder storage dan bootstrap/cache untuk Laravel
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Jalankan migrasi database secara force (tidak perlu interaksi)
-RUN php artisan migrate --force
+# Aktifkan mod_rewrite Apache
+RUN a2enmod rewrite
 
-# Expose port yang digunakan oleh aplikasi
-EXPOSE 9000
+# Ekspose port Apache
+EXPOSE 80
 
-# Jalankan PHP-FPM untuk aplikasi Laravel
-CMD ["php-fpm"]
+# Jalankan Apache dalam mode foreground
+CMD ["apache2-foreground"]

@@ -33,10 +33,13 @@ WORKDIR /var/www/html
 # Instal dependensi PHP menggunakan Composer
 RUN composer install --no-dev --optimize-autoloader
 
+# Periksa versi yarn
+RUN yarn --version
+
 # Instal dependensi frontend menggunakan Yarn
 RUN yarn install
 
-# Proses build untuk produksi (misalnya, dengan 'yarn prod' jika itu tersedia dalam package.json Anda)
+# Jalankan build frontend (npm run prod atau yarn run prod)
 RUN yarn run prod
 
 # Setel izin folder storage dan bootstrap/cache untuk Laravel

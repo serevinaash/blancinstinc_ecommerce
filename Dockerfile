@@ -23,15 +23,14 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | tee /etc/apt/trusted.gpg
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && apt-get install -y yarn
 
-# Instal dependensi PHP menggunakan Composer
-COPY composer.json composer.lock /var/www/html/
-RUN composer install --no-dev --optimize-autoloader
-
 # Salin file aplikasi Anda ke dalam container
 COPY . /var/www/html/
 
-# Instal dependensi frontend menggunakan Yarn
+# Instal dependensi PHP menggunakan Composer setelah menyalin file Laravel
 WORKDIR /var/www/html
+RUN composer install --no-dev --optimize-autoloader
+
+# Instal dependensi frontend menggunakan Yarn
 RUN yarn install && yarn prod
 
 # Setel izin folder storage dan bootstrap/cache untuk Laravel

@@ -1,1 +1,14 @@
+# Ignore environment configuration files
 .env
+.env.local
+.env.production
+.env.*.local
+
+# Ignore directories and system files
+/node_modules
+/vendor
+*.log
+*.cache
+.DS_Store
+.idea/
+.vscode/

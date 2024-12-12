@@ -1,44 +1,50 @@
-# Base image
-FROM php:8.2-fpm
+# Gunakan image resmi PHP sebagai base image
+FROM php:8.1-fpm
 
-# Install system dependencies
+# Set working directory di dalam container
+WORKDIR /app
+
+# Install sistem dependensi yang diperlukan (untuk Laravel)
 RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    libzip-dev \
     git \
     unzip \
-    libzip-dev \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    nodejs \
-    npm \
-    yarn
+    curl \
+    && docker-php-ext-configure zip \
+    && docker-php-ext-install gd zip
 
-# Install PHP extensions
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo_mysql zip gd
+# Install Composer (dependency manager untuk PHP)
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install Composer
-COPY --from=composer:2.5 /usr/bin/composer /usr/bin/composer
+# Install Node.js (diperlukan untuk npm dan yarn)
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install -y nodejs
 
-# Set working directory
-WORKDIR /var/www/html
+# Install Yarn
+RUN npm install -g yarn
 
-# Copy files
-COPY . .
+# Copy seluruh kode aplikasi ke dalam container
+COPY . /app
 
-# Install dependencies
+# Install dependensi PHP melalui Composer
 RUN composer install --no-dev --optimize-autoloader
-RUN yarn install && yarn prod
 
-# Laravel setup
-RUN php artisan optimize
-RUN php artisan view:cache
+# Install dependensi JavaScript melalui Yarn
+RUN yarn install
 
-# Run migrations with --force to bypass the prompt
+# Run production build untuk frontend assets
+RUN yarn prod
+
+# Optimalkan aplikasi Laravel (cache routes, views, dll)
+RUN php artisan optimize && php artisan view:cache
+
+# Jalankan migrasi database secara force (tidak perlu interaksi)
 RUN php artisan migrate --force
 
-# Expose port
-EXPOSE 8000
+# Expose port yang digunakan oleh aplikasi
+EXPOSE 9000
 
-# Start server
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+# Jalankan PHP-FPM untuk aplikasi Laravel
+CMD ["php-fpm"]

@@ -2,7 +2,14 @@
 FROM php:8.1-apache
 
 # Instal dependensi sistem untuk ekstensi PHP dan MySQL
-RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev libzip-dev git unzip libpdo-mysql
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libzip-dev \
+    git \
+    unzip \
+    && rm -rf /var/lib/apt/lists/*
 
 # Instal ekstensi PHP yang diperlukan
 RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \

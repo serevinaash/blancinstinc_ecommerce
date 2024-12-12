@@ -99,14 +99,14 @@
                     <div class="col-lg-6">
                         <div class="tg-supplement-content mt-60 wow fadeInLeft" data-wow-delay=".2s">
                             <div class="tg-section-title mb-25">
-                                <span class="sub-title">ingredients</span>
-                                <h2 class="title">growth promoter <br> supplement</h2>
+                                <span class="sub-title">About</span>
+                                <h2 class="title">Blancinstinc <br> Perfume Marketplace</h2>
                             </div>
-                            <p>Vitamin Ipsum is simply dummy text of the printing and tysetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley.</p>
-                            <a href="{{route ("shop")}}" class="tg-btn view-btn">VIEW more</a>
+                            <p>Blancinstinc adalah platform marketplace yang menyediakan beragam pilihan parfum berkualitas tinggi. Dengan keharuman yang beragam dan eksklusif, Blancinstinc membantu Anda menemukan aroma yang paling sesuai dengan kepribadian Anda.</p>
+                            <a href="{{route('shop')}}" class="tg-btn view-btn">Explore More</a>
                         </div>
                     </div>
-                </div>
+
             </div>
         </div>
     </section>

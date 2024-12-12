@@ -105,9 +105,7 @@
                                         <form action="{{ route('cart-add', $product->id ?? '') }}" method="POST">
                                             @csrf
                                             <!-- Input kuantitas -->
-                                            <div class="quickview-cart-plus-minus">
-                                                <input type="number" name="quantity" value="1" min="1" class="quantity-input">
-                                            </div>
+
                                             <!-- Tombol Add to Cart -->
                                             @if(isset($product->id))
                                                 <button type="submit" class="cart-btn">Add to Cart</button>

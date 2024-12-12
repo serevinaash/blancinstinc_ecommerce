@@ -153,7 +153,7 @@
                                     </div>
                                   </div>
 
-                                        <button class="btn btn-sm">Proceed to checkout</a>
+                                        <button class="btn btn-sm" type="submit">Proceed to checkout</a>
                                     </div>
                                 </div>
 
